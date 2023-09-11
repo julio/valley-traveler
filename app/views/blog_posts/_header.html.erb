@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <%= link_to "Home", blog_posts_path %>
+    </div>
+    <% if user_signed_in? %>
+        <span>
+            <%= link_to "New", new_blog_post_path %>
+        </span>
+        <span>
+            <%= button_to "Log out", destroy_user_session_path, method: :delete %>
+        </span>
+    <% end %>
+</div>
+
+<h1 class="text-3xl font-bold underline">Valley Traveler</h1>
