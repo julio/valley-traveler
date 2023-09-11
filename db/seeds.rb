@@ -6,9 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# 100.times do |i|
-#   BlogPost.create(
-#     title: "Blog Post ##{i+1}",
-#     content: "Body of post ##{i+1}",
-#     published_at: Time.current)
-# end
+100.times do |i|
+  blog_post = BlogPost.where(title: "Blog Post #{i}").first_or_initialize
+  blog_post.update(content: "Body of blog ##{i}", published_at: Time.current)
+end
