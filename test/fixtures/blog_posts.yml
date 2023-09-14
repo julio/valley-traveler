@@ -1,13 +1,1 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-draft_one:
-  title: MyString
-  body: MyText
-  published_at:
-  updated_at: <%= 3.days.ago %>
-
-draft_two:
-  title: MyString
-  body: MyText
-  published_at:
-  updated_at: <%= 1.day.ago %>
