@@ -79,3 +79,4 @@ gem "pg", "~> 1.5"
 gem "aws-sdk-s3", require: false
 gem "pagy", "~> 6.0"
 gem 'friendly_id', '~> 5.4.0'
+gem "heroicon", "~> 1.0"

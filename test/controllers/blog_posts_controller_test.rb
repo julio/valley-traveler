@@ -1,7 +1,8 @@
 require "test_helper"
 
 class BlogPostsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "root path should show the blog posts index" do
+    get root_path
+    assert_response :success
+  end
 end
