@@ -2,8 +2,6 @@
 
 <% @blog_posts.each do |blog_post| %>
     <div>
-        <%= image_tag blog_post.cover_image if blog_post.cover_image.present? %>
-
         <h2><%= link_to blog_post.title, blog_post %></h2>
         <% if blog_post.draft? %>
             <div class="p-2 rounded bg-gray-100 text-gray-900">draft</div>
@@ -12,7 +10,7 @@
             scheduled (<%= blog_post.published_at.to_date.to_fs(:long) %>)
             </div>
         <% end %>
-        <%= blog_post.content %>
+        <%= blog_post.content.to_plain_text.truncate(500) %>
     </div>
 <% end %>
 
