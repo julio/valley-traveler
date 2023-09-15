@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Valley Traveler</title>
+    <% if yield(:title).blank? %>
+      <title>Valley Traveler :: Travel articles within and from the Silicon Valley</title>
+    <% else %>
+      <title><%= yield(:title) %></title>
+    <% end %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Travel stories, explore the silicon valley, travel from the silicon valley. portugal, mexico, california">
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
